@@ -102,7 +102,7 @@ libusb_device_handle* open_device(libusb_context *ctx) {
 
   /* device not found */
   if (cnt == 0) {
-    fprintf(stderr, "device not connected\n");
+    fprintf(stderr, "device not connected or lack of permissions\n");
     exit(1);
   }
 
