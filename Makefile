@@ -1,8 +1,10 @@
 CC      = cc
 OBJS    = bto_ir_cmd.o
+#LIBS	= -lusb-1.0
+LIBS	= -lusb
 
 bto_ir_cmd: $(OBJS)
-	$(CC) -Wall -o $@ $(OBJS) -lusb-1.0 
+	$(CC) -Wall -o $@ $(OBJS) $(LIBS)
 
 .c.o:
 	$(CC) -c $<

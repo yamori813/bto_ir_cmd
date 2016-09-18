@@ -3,7 +3,11 @@
 #include <string.h>
 #include <unistd.h>
 #include <errno.h>
+#ifdef __FreeBSD__
+#include <libusb.h>
+#else
 #include <libusb-1.0/libusb.h>
+#endif
 
 #define VENDOR_ID  0x22ea
 #define PRODUCT_ID 0x001e
